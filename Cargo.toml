@@ -1,0 +1,16 @@
+[package]
+name = "multi_node_server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+
+# Declare two binaries, one for the coordinator and one for each receiver node
+[[bin]]
+name = "coordinator"
+path = "src/coordinator.rs"
+
+[[bin]]
+name = "node"
+path = "src/node.rs"
